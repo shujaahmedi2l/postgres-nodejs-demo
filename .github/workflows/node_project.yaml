@@ -18,7 +18,7 @@ jobs:
         run: |
           sudo cp argo-ci-cd/${{ secrets.ARGO_CI_CD_YAML_NAME }} /tmp/${{ secrets.ARGO_CI_CD_YAML_NAME }}
           sudo cp ecr/${{ secrets.ECR_YAML_NAME }} /tmp/${{ secrets.ECR_YAML_NAME }}
-          sudo cp ecr/${{ secrets.RDS_YAML_NAME }} /tmp/${{ secrets.RDS_YAML_NAME }}
+          sudo cp rds/${{ secrets.RDS_YAML_NAME }} /tmp/${{ secrets.RDS_YAML_NAME }}
           cd /tmp
           sudo git clone https://${{ secrets.REPO_TOKEN }}@github.com/robotfree/onexidp-gitops.git main
           echo "Git: just cloned the onexidp-gitops.git repo"
